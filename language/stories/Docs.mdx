@@ -1,0 +1,28 @@
+import * as Localization from './Localization.stories.ts';
+import { Meta, Title, Description, Story, Canvas, Controls, ArgTypes } from '@storybook/blocks';
+
+<Meta of={Localization} />
+
+<div className="component-header">
+    <h1>Localization</h1>
+</div>
+
+As an international company, we've got to ensure our user interface displays correctly in each of the many languages we support. It is important to realize that there's more to language than just translating captions. Each country has its own rules that determine:
+
+-   how to display a date
+-   how to format numbers
+-   and even things like what to consider to be the first day of a week.
+
+We refer to the combination of a language and the regional rules as a locale. A locale is uniquely identified by a language code. Use this control to change the locale and the changes will be reflected in the sections below.
+
+<Controls of={Localization.Caption} />
+
+## Date and Time
+
+<Story of={Localization.DateTime} />
+
+## Translatable captions
+
+<Canvas>
+    <Story of={Localization.Caption} />
+</Canvas>

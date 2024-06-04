@@ -1,0 +1,91 @@
+import statusAvailable from '../../../storybook/assets/statusAvailable.svg';
+import statusPlanned from '../../../storybook/assets/statusPlanned.svg';
+import statusDeprecated from '../../../storybook/assets/statusDeprecated.svg';
+
+import { Meta, Title, Description, Story, Canvas, Controls, ArgTypes } from '@storybook/blocks';
+import * as WtgEntityActions from './WtgEntityActions.stories.ts';
+
+<Meta of={WtgEntityActions} />
+
+<div className="component-header">
+    <h1>Entity Actions</h1>
+    <span className="component-status-badge">Alpha</span>
+</div>
+
+<table style={{ width: '100%' }} className="component-status">
+    <tr>
+        <th></th>
+        <th scope="col" className="th-center">
+            Supply 1.0
+        </th>
+        <th scope="col">Supply 0.5</th>
+    </tr>
+    <tr>
+        <th scope="row">Build</th>
+        <td>
+            {' '}
+            <img className="status-chip" src={statusPlanned}></img> Work in Progress
+        </td>
+        <td>
+            <img className="status-chip" src={statusDeprecated}></img> Unavailable
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">Design</th>
+        <td>
+            <img className="status-chip" src={statusPlanned}></img> [Work in Progress](https://www.figma.com/file/g6kTPiwXZrzyIZb4i41RYl/%5BCargoWise%5D-SUPPLY---Components?type=design&node-id=684-32659&mode=design&t=Id65DtVyTBzfOExN-0)
+        </td>
+        <td>
+            <img className="status-chip" src={statusDeprecated}></img> Unavailable
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">Documentation</th>
+        <td>
+            {' '}
+            <img className="status-chip" src={statusPlanned}></img> Work in Progress
+        </td>
+        <td>
+            {' '}
+            <img className="status-chip" src={statusDeprecated}></img> Unavailable
+        </td>
+    </tr>
+</table>
+
+## Overview
+
+<p className="component-description">
+    <Description />
+</p>
+
+<div className="component-preview grid">
+    <span>Component preview</span>
+    <Story of={WtgEntityActions.Default} />
+</div>
+
+## Table of contents
+
+<ul>
+    <li>[Overview](#overview)</li>
+    <li>[Quick tips](#quick-tips)</li>
+    <li>[Best practices](#best-practices)</li>
+    <li>[Default](#default)</li>
+</ul>
+
+## Quick tips
+
+<div className="component-quicktip">Coming soon...</div>
+
+## Best practices
+
+Coming soon...
+
+## Default
+
+<Canvas>
+    <Story of={WtgEntityActions.Default} />
+</Canvas>
+
+### Component properties
+
+<Controls of={WtgEntityActions.Default} />

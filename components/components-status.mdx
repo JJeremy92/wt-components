@@ -1,0 +1,32 @@
+import statusAvailable from '../storybook/assets/statusAvailable.svg';
+import statusPlanned from '../storybook/assets/statusPlanned.svg';
+import statusDeprecated from '../storybook/assets/statusDeprecated.svg';
+import Status from '../storybook/status/component-status.jsx';
+import FrameworkStatus from '../storybook/status/component-framework-status.jsx';
+
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Components/Status" />
+
+<h1 className="content-header">Component status</h1>
+
+<div className="banner-warning">
+
+    <div>
+        <h4>⚠️ Please note</h4>
+        <p>This status page focuses on our new Supply component library. A library which is being built from the ground up and will be detached from Vuetify and Material Design concepts.</p>
+    </div>
+
+</div>
+     <div>
+        <p>Please visit the official [GLOW 321](https://www-hyetip.cargowise.com/Portals/321/Desktop#/page/9c700f8509594495a0cdc87749b3b76e) portal to learn more about available GLOW specific components.</p>
+        <p>For the old Material Design content please clone [this repository](https://devops.wisetechglobal.com/wtg/Shared/_git/WTG.MaterialDesign) and run it locally.</p>
+    </div>
+
+### Base Components
+
+<Status />
+
+### Framework Components
+
+<FrameworkStatus />

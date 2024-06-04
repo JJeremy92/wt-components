@@ -1,0 +1,176 @@
+import statusAvailable from '../../../storybook/assets/statusAvailable.svg';
+import statusPlanned from '../../../storybook/assets/statusPlanned.svg';
+import statusDeprecated from '../../../storybook/assets/statusDeprecated.svg';
+
+import image from '../../../storybook/assets/component-button-decisiontree.svg';
+
+import { Meta, Title, Description, Story, Canvas, Controls, ArgTypes } from '@storybook/blocks';
+import * as WtgButton from '../../WtgButton/stories/WtgButton.stories';
+import * as WtgIconButton from './WtgIconButton.stories.ts';
+
+<Meta of={WtgIconButton} />
+
+<div className="component-header">
+    <h1>Icon Button</h1>
+    <span className="component-status-badge">Alpha</span>
+</div>
+<table style={{ width: '100%' }} className="component-status">
+  <tr>
+    <th></th>
+    <th scope="col" className="th-center">Supply 1.0</th>
+    <th scope="col">Supply 0.5</th>
+  </tr>
+  <tr>
+    <th scope="row">Build</th>
+    <td> <img className="status-chip" src={statusPlanned}></img> Work in Progress</td>
+    <td><img className="status-chip" src={statusAvailable}></img> Available</td>
+  </tr>
+  <tr>
+    <th scope="row">Design</th>
+    <td><img className="status-chip" src={statusAvailable}></img> [Available in Figma](https://www.figma.com/file/g6kTPiwXZrzyIZb4i41RYl/%5BCargoWise%5D-SUPPLY---Components?type=design&node-id=171-10711&mode=design&t=7xXghGMMa9DmSxFM-4)</td>
+    <td><img className="status-chip" src={statusAvailable}></img> [Available in Figma](https://www.figma.com/file/g6kTPiwXZrzyIZb4i41RYl/%5BCargoWise%5D-SUPPLY---Components?type=design&node-id=171-10711&mode=design&t=7xXghGMMa9DmSxFM-4)</td>
+  </tr>
+  <tr>
+    <th scope="row">Documentation</th>
+    <td> <img className="status-chip" src={statusPlanned}></img> Work in Progress</td>
+    <td> <img className="status-chip" src={statusDeprecated}></img> Deprecated</td>
+  </tr>
+</table>
+
+
+## Overview
+<p className="component-description">
+    <Description />
+</p>
+
+<div className="component-preview grid">
+    <span>Component preview</span>
+    <Story of={WtgIconButton.Primary} />
+</div>
+
+## Table of contents
+<ul>
+    <li>[Overview](#overview)</li>
+    <li>[Usage guidelines](#usage-guidelines)</li>
+    <li>[Component variants](#component-variants)</li>
+    <li>[Related components](#related-components)</li>
+</ul>
+
+## Usage guidelines
+<p>Icon Buttons are best used when limited space is available and when the icon being used is clear in meaning and intent. They are a great way of presenting a series of repeatable common actions related to a specific panel or data grid.</p>
+<p>Icon buttons however sacrifice legibility for space and rely on the icon being used to be clear in meaning and intent at a glance. Ask yourself the below questions in order before considering using an Icon Button. If your answer is Yes to all of the below questions, then an Icon Button can be used. Otherwise, a Standard Button might be a safer choice.</p>
+
+<table style={{ width: '100%' }} className="component-status">
+    <tr>
+        <th>Question one</th>
+        <th>Question two</th>
+        <th>Question three</th>
+    </tr>
+        <tr>
+            <td>
+                Is the action a core task?
+            </td>
+            <td>
+                Is the icon button an uncommon action e.g. create scope?
+            </td>
+            <td>
+               Can the action be easily understood with just an icon and a tooltip?
+            </td>
+        </tr>
+</table>
+
+<p>If you decide that an Icon Button is the right choice, adhere to the following <strong>best practices:</strong></p>
+<ul>
+    <li>Always ensure the built-in tooltip comes with a clear and concise description of the intended action</li>
+    <li>Try to ensure the Icon is easily understood and not already used elsewhere for another action</li>
+</ul>
+
+## Component variants
+
+### Primary
+
+<p>Primary Icon Buttons are reserved for the highest priority actions on the panel and should only be considered if there isn’t enough space for a Primary Button or Primary Split Button.</p>
+
+<ul>
+    <li>Use sparingly as primary icon Buttons run the risk of being lost on a page.</li>
+    <li>Always pair with a tooltip to ensure the most clarity on the primary action being shown.</li>
+</ul>
+
+<Canvas>
+    <Story of={WtgIconButton.Primary} />
+</Canvas>
+#### Component properties
+<Controls of={WtgIconButton.Primary} />
+
+### Default
+
+<p>Default Icon Buttons are best used for core functionality such as up-down navigation or opening in new window. It can also be used as a replacement for Default Buttons if a Default Button or Default Split Button only when there isn’t enough space for either.</p>
+
+<ul>
+    <li>Try to always pair with a tooltip to ensure the action is easily understood when interacting with it</li>
+</ul>
+
+<Canvas>
+    <Story of={WtgIconButton.Primary} />
+</Canvas>
+#### Component properties
+<Controls of={WtgIconButton.Primary} />
+
+### Ghost
+
+<p>Ghost Icon Buttons are best used for the lowest priority core functionality, such as closing a modal. A tooltip on hover may not be required for these sorts of actions. However, the icon being used must be contextually understandable at a glance without the need for supporting information.</p>
+
+<ul>
+    <li>It may not need a tooltip, but it should be easily understood what will happen when clicked</li>
+</ul>
+
+<Canvas>
+    <Story of={WtgIconButton.Primary} />
+</Canvas>
+#### Component properties
+<Controls of={WtgIconButton.Primary} />
+
+## Related components
+
+<div className="grid-3">
+  <div className="component-related">
+    <div className="card">
+
+        <div>
+            <div className="component-related-canvas">
+                <Story of={WtgButton.Ghost} />
+            </div>
+            <h3>Actionbar</h3>
+            <p>A panel used to contain the primary, secondary and destructive actions you can perform on a page or entity.</p>
+        </div>
+    </div>
+
+  </div>
+  <div className="component-related">
+    <div className="card">
+
+        <div>
+            <div className="component-related-canvas">
+                <Story of={WtgButton.Ghost} />
+            </div>
+            <h3>Actionbar</h3>
+            <p>A panel used to contain the primary, secondary and destructive actions you can perform on a page or entity.</p>
+        </div>
+    </div>
+
+  </div>
+  <div className="component-related">
+    <div className="card">
+
+        <div>
+            <div className="component-related-canvas">
+                <Story of={WtgButton.Ghost} />
+            </div>
+            <h3>Actionbar</h3>
+            <p>A panel used to contain the primary, secondary and destructive actions you can perform on a page or entity.</p>
+        </div>
+    </div>
+
+  </div>
+
+</div>

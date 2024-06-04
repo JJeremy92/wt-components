@@ -1,0 +1,48 @@
+import * as WtgContainer from '../components/WtgContainer/stories/WtgContainer.stories.ts';
+import { Meta, Title, Description, Story, Canvas, ColorPalette, ColorItem } from '@storybook/blocks';
+
+<Meta title="Layouts/Templates" />
+
+<h1 className="content-header">Layouts</h1>
+
+## Wiki
+
+[Learn more](https://devops.wisetechglobal.com/wtg/CargoWise/_wiki/wikis/CargoWise.wiki/6335/Layouts)
+
+<h2>Available Layouts</h2>
+
+<h3> Full Page panel </h3>
+
+<Canvas>
+    <Story of={WtgContainer.FullPagePanelLayout} />
+</Canvas>
+
+<h3> Full page with side panel </h3>
+
+<Canvas>
+    <Story of={WtgContainer.fullPageWithSidePanel} />
+</Canvas>
+
+<h3>Full page with bottom panel </h3>
+
+<Canvas>
+    <Story of={WtgContainer.fullPageWithBottomPanel} />
+</Canvas>
+
+<h3> Fixed multi-panel </h3>
+
+<Canvas>
+    <Story of={WtgContainer.fixedMultiPanel} />
+</Canvas>
+
+<h3> Fixed multi-panel with side panel </h3>
+
+<Canvas>
+    <Story of={WtgContainer.fixedMultiPanelWithSidePanel} />
+</Canvas>
+
+<h3> Fixed multi-panel with bottom panel.</h3>
+
+<Canvas>
+    <Story of={WtgContainer.fixedMultiPanelWithBottomPanel} />
+</Canvas>

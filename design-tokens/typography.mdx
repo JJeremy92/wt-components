@@ -1,0 +1,67 @@
+import { Meta, Typeset } from '@storybook/addon-docs';
+
+<Meta title="Design Tokens/Typography" />
+
+export const typography = {
+    type: {
+        primary: '"Inter", sans-serif',
+    },
+    weight: {
+        regular: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+    },
+    size: {
+        s100: 10,
+        s200: 12,
+        s300: 13,
+        s400: 16,
+        s500: 20,
+        s600: 28,
+        s700: 32,
+        s800: 40,
+    },
+};
+
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+
+<h1 className="content-header">Typography</h1>
+
+**Font:** Inter
+
+**Weights:** 400(regular), 500(medium), 600(semibold), 700(bold)
+
+<Typeset
+    fontSizes={[
+        Number(typography.size.s100),
+        Number(typography.size.s200),
+        Number(typography.size.s300),
+        Number(typography.size.s400),
+        Number(typography.size.s500),
+        Number(typography.size.s600),
+        Number(typography.size.s700),
+        Number(typography.size.s800),
+    ]}
+    fontWeight={typography.weight.bold}
+    sampleText={SampleText}
+    fontFamily={typography.type.primary}
+/>
+
+## Display
+
+<Typeset
+    fontSizes={[Number(typography.size.s800), Number(typography.size.s700), Number(typography.size.s600)]}
+    fontWeight={typography.weight.bold}
+    sampleText={SampleText}
+    fontFamily={typography.type.primary}
+/>
+
+## Title
+
+<Typeset
+    fontSizes={[Number(typography.size.s500), Number(typography.size.s400), Number(typography.size.s300)]}
+    fontWeight={typography.weight.semibold}
+    sampleText={SampleText}
+    fontFamily={typography.type.primary}
+/>

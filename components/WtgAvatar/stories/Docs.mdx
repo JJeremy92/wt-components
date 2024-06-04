@@ -1,0 +1,170 @@
+import statusAvailable from '../../../storybook/assets/statusAvailable.svg';
+import statusPlanned from '../../../storybook/assets/statusPlanned.svg';
+import statusDeprecated from '../../../storybook/assets/statusDeprecated.svg';
+
+import image from '../../../storybook/assets/component-button-decisiontree.svg';
+
+import { Meta, Title, Description, Story, Canvas, ColorPalette, ColorItem } from '@storybook/blocks';
+import * as WtgAvatar from './WtgAvatar.stories.ts';
+
+<Meta of={WtgAvatar} />
+
+<h1 className="component-header">Avatar</h1>
+
+<table style={{ width: '100%' }} className="component-status">
+    <tr>
+        <th>Status</th>
+        <th>Figma</th>
+        <th>Code</th>
+    </tr>
+    <tr>
+        <td>
+            <img src={statusPlanned}></img> Planned
+        </td>
+        <td>
+            <img src={statusAvailable}></img> [Available in Figma](https://www.figma.com/file/g6kTPiwXZrzyIZb4i41RYl/%5BCargoWise%5D-SUPPLY---Components?type=design&node-id=171-10221&mode=design&t=2M0RVP1vK37vQGdk-4)
+        </td>
+        <td>
+            <img src={statusPlanned}></img> Planned
+        </td>
+    </tr>
+</table>
+
+<p className="component-description">
+    <Description />
+</p>
+
+<div className="component-quicktip">
+    <p>💡 Quick tips</p>
+    <ul>
+        <li>Keep Button Labels concise and clearly explain the action to be expected</li>
+        <li>
+            You can only have one primary action per page, guiding users to the logical next step in their workflow
+            (Excluding framework related actions)
+        </li>
+        <li>
+            Use success and error states sparingly and appropriately. For example, only use an error Button variant for
+            an action that’s difficult or impossible to undo.
+        </li>
+        <li>Use strong, actionable verbs in Labels such as “add new”, “Close”, “Cancel”, or “Save”.</li>
+        <li>
+            Avoid using Buttons to link to other pages. Use a regular link or a plain style instead where necessary.
+        </li>
+    </ul>
+</div>
+
+## Decision tree
+
+<img src={image} className="component-img"></img>
+
+<Story of={WtgAvatar.PhotoAvatar} />
+
+## Best practices
+
+### Labels
+
+Keep Button Labels concise, clear, and action-oriented. Use verbs like "Submit," "Save," and "Cancel". Avoid vague Labels like "Click here." Consistent Labels improve the user experience.
+
+<div class="row">
+    <div class="column">
+        <div class="card">
+            ### Icons
+            <ul>
+                <li>Use sparingly and only when the icon provides additional context to the action being taken.</li>
+                <li>Always prioritize clarity and understandability when deciding whether to include an icon.</li>
+                <li>
+                    In cases where an icon doesn't add value or may confuse users, a text-only Button is more
+                    appropriate.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="column">
+        <div class="card-canvas"></div>
+    </div>
+</div>
+
+#### Leading icons
+
+        Use Leading Icons to visually support an action, and provide additional context to what is happening. For example, adding a “+” to an “Add new X” Button helps provide additional context to the action.
+
+#### Trailing icons
+
+Use Trailing Icons to better support the user in understanding the UI process the action is about to prompt. For example, using an arrow can indicate that a Button will open a dropdown or a new window.
+
+## Button variants
+
+### Primary
+
+Primary Buttons are reserved for the main call-to-actions of a page or panel. Primary Buttons have the highest visual impact of the Button variants and, therefore, communicate actions that move the workflow forward.
+
+<ul>
+    <li>
+        Use a single primary action per page to keep the purpose of your next logical step clear. This is what you want
+        your user to click in a normal scenario.
+    </li>
+</ul>
+
+<Canvas></Canvas>
+
+### Default
+
+Ghost Buttons or Text Buttons are typically the lowest priority actions in a design, especially when presenting multiple options on a page or panel.
+
+<ul>
+    <li>Use the isError variant for destructive actions such as "discard" or "delete."</li>
+</ul>
+
+### Ghost
+
+Ghost Buttons or Text Buttons are typically the lowest priority actions in a design, especially when presenting multiple options on a page or panel.
+
+<ul>
+    <li>It can be used to provide multiple supplementary actions if there is no clear primary or secondary action.</li>
+    <li>Best used for non-critical choices in a workflow, such as cancelling or subscribe</li>
+</ul>
+
+## Related components
+
+<div className="row">
+  <div className="column component-related">
+    <div className="card">
+
+        <div>
+            <div className="component-related-canvas">
+
+            </div>
+            <h3>Actionbar</h3>
+            <p>A panel used to contain the primary, secondary and destructive actions you can perform on a page or entity.</p>
+        </div>
+    </div>
+
+  </div>
+  <div className="column component-related">
+    <div className="card">
+
+        <div>
+            <div className="component-related-canvas">
+
+            </div>
+            <h3>Actionbar</h3>
+            <p>A panel used to contain the primary, secondary and destructive actions you can perform on a page or entity.</p>
+        </div>
+    </div>
+
+  </div>
+  <div className="column component-related">
+    <div className="card">
+
+        <div>
+            <div className="component-related-canvas">
+
+            </div>
+            <h3>Actionbar</h3>
+            <p>A panel used to contain the primary, secondary and destructive actions you can perform on a page or entity.</p>
+        </div>
+    </div>
+
+  </div>
+
+</div>

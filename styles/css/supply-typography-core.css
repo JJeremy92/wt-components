@@ -1,0 +1,23 @@
+:root {
+	--s-display-large: 700 40px/48px Inter;
+	--s-body-strong: 600 13px/20px Inter;
+	--s-body: 400 13px/20px Inter;
+	--s-display: 700 32px/40px Inter;
+	--s-display-small: 700 28px/32px Inter;
+	--s-title-large: 600 20px/28px Inter;
+	--s-title-large-numeric: 600 20px/28px Inter;
+	--s-title: 600 16px/24px Inter;
+	--s-title-small: 600 13px/20px Inter;
+	--s-body-link: 400 13px/20px Inter;
+	--s-button: 600 13px/20px Inter;
+	--s-numeric: 400 13px/20px Inter;
+	--s-numeric-strong: 600 13px/20px Inter;
+	--s-numeric-link: 400 13px/20px Inter;
+	--s-label: 400 12px/16px Inter;
+	--s-label-strong: 600 12px/16px Inter;
+	--s-placeholder: 400 13px/20px Inter;
+	--s-placeholder-numeric: 400 13px/20px Inter;
+	--s-microcopy: 400 10px/10px Inter;
+	--s-microcopy-numeric: 400 10px/10px Inter lining-nums tabular-nums;
+	
+}

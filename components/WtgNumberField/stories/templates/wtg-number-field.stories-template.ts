@@ -1,0 +1,75 @@
+export const NumericControlsWithIconsTemplate = `
+<wtg-number-field 
+    v-bind="args"
+    leading-icon="$currency-dollar" 
+    @input="inputAction" 
+    @change="changeAction"
+    @focus="focusAction"
+    @blur="blurAction"
+    @update:modelValue="updateAction">
+</wtg-number-field>
+<wtg-number-field 
+    v-bind="args"
+    leading-icon="$pre-accounting" 
+    @input="inputAction"
+    @change="changeAction"
+    @focus="focusAction"
+    @blur="blurAction"
+    @update:modelValue="updateAction">
+</wtg-number-field>
+<wtg-number-field 
+    v-bind="args"
+    trailing-icon="$pre-accounting" 
+    @input="inputAction"
+    @change="changeAction"
+    @focus="focusAction"
+    @blur="blurAction"
+    @update:modelValue="updateAction">
+</wtg-number-field>
+<wtg-number-field 
+    v-bind="args"
+    trailing-icon="$currency-dollar"
+    @input="inputAction"
+    @change="changeAction"
+    @focus="focusAction"
+    @blur="blurAction"
+    @update:modelValue="updateAction">
+</wtg-number-field>
+`;
+export const NumericControlsWithMessagesTemplate = `
+<wtg-number-field 
+    v-bind="args"
+    :is-invalid="true"
+    leading-icon="$currency-dollar"
+    :messages="['Amount must be between 0 and 20000']"
+    modelValue="21000"
+    @input="inputAction"
+    @change="changeAction"
+    @focus="focusAction"
+    @blur="blurAction"
+    @update:modelValue="updateAction">
+</wtg-number-field>
+<wtg-number-field 
+    v-bind="args"
+    :is-warning="true"
+    leading-icon="$currency-dollar"
+    :messages="['Amount must be between 0 and 20000']"
+    modelValue="21000"
+    @input="inputAction"
+    @change="changeAction"
+    @focus="focusAction"
+    @blur="blurAction"
+    @update:modelValue="updateAction">
+</wtg-number-field>
+<wtg-number-field 
+    v-bind="args"
+    :is-valid="true"
+    leading-icon="$currency-dollar"
+    modelValue="10000"
+    @input="inputAction"
+    @change="changeAction"
+    @focus="focusAction"
+    @blur="blurAction"
+    @update:modelValue="updateAction">
+</wtg-number-field>
+`;

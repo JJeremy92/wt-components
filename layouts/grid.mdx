@@ -1,0 +1,92 @@
+import * as WtgLayoutGrid from '../components/WtgLayoutGrid/stories/WtgLayoutGrid.stories.ts';
+import { Meta, Title, Description, Story, Canvas, ColorPalette, ColorItem } from '@storybook/blocks';
+
+<Meta title="Layouts/Grid" />
+
+<h1 className="content-header">Layout Grid</h1>
+
+<p>
+    The layout grid is based on the 12 point grid system popularized by <a href="https://getbootstrap.com/docs/4.0/layout/grid/">Bootstrap</a> and is used to create responsive layouts that adapt to different device sizes. It is based on 5 types of media breakpoints that allow it
+    to respond to the different screen sizes.
+</p>
+
+<ul>
+    <li>
+        <b>xs</b> for a small to large phone (width &lt; 600px)
+    </li>
+    <li>
+        <b>sm</b> for a small to medium tablet (width &lt; 960px)
+    </li>
+    <li>
+        <b>md</b> for a large tablet to a laptop (width &lt; 1280px)
+    </li>
+    <li>
+        <b>lg</b> for a laptop to desktop (width &lt; 1920px)
+    </li>
+    <li>
+        <b>xl</b> for a 1080p to 1440p desktop (width &lt; 2560px)
+    </li>
+    <li>
+        <b>xxl</b> for 4k and ultra-wide screens (width &gt; 2560px)
+    </li>
+</ul>
+
+<h2>Sub-components</h2>
+
+<h3> wtg-container </h3>
+
+<p>[wtg-container](/docs/layouts-container--docs) rovides the ability to center and horizontally pad your site’s contents.</p>
+
+<h3> wtg-col </h3>
+
+<p>[wtg-col](/docs/layouts-col--docs) is a content holder that must be a direct child of wtg-row. It's use is often implicit as the primary use case is implemented as part of wtg-layout-grid.</p>
+
+<h3>wtg-row </h3>
+
+<p>[wtg-row](/docs/layouts-row--docs) is a wrapper component for wtg-col. It utilizes flex properties to control the layout and flow of its inner columns. It uses a standard gutter of 24px. This can be reduced with the dense prop or removed completely with no-gutters.</p>
+
+<h3> wtg-spacer </h3>
+
+<p>
+    [wtg-spacer](/docs/layouts-spacer--docs) is a basic yet versatile spacing component used to distribute remaining width in-between a parents child components. When placing a single wtg-spacer before or after the child components, the components will push to the right and left
+    of its container. When more than one v-spacer’s are used between multiple components, the remaining width is evenly distributed between each spacer.
+</p>
+
+<h3> wtg-layout-grid </h3>
+
+<p>[wtg-layout-grid](/docs/layouts-layoutgrid--docs) is SUPPLY's grid component whose primary purpose is to simplify responsive design code by negating the need for individual wtg-col layout construction in favor of a columns property on individual components.</p>
+
+<h2> Examples </h2>
+
+<h3> Columns </h3>
+
+<p>
+    When wrapped in a wtg-layout-grid component, you can control the layout behaviour of components through their columns property (if it has one). The example below shows how you should interpret the composite string value of the <b>columns</b> property.
+</p>
+
+<div>
+    <p>
+        When you set columns="<b>col-sm-6 col-md-4</b>", what you mean is:
+    </p>
+    <ul>
+        <li>This control takes up all 12 columns on extra small devices,</li>
+        <li>it takes up 6 out of 12 columns on small devices</li>
+        <li>and it takes up 4 out of 12 columns on medium, large and extra large devices.</li>
+    </ul>
+</div>
+<div class="mt-4">
+    <p>Resize your browser and watch what happens in the example below when we reach the various breakpoints.</p>
+</div>
+
+<Canvas>
+    <Story of={WtgLayoutGrid.Columns} />
+</Canvas>
+
+<h3> Gutters </h3>
+<p>
+    Gutters refers to the gap between the different columns. If the layout wraps over multiple rows it refers to the gap between the rows as well. The grid has a default gutter size of
+    <b>24px</b>. This can be removed completely with the <b>no-gutters</b> property.
+</p>
+<Canvas>
+    <Story of={WtgLayoutGrid.NoGutters} />
+</Canvas>

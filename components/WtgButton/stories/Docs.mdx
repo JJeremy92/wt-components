@@ -1,0 +1,261 @@
+import statusAvailable from '../../../storybook/assets/statusAvailable.svg';
+import statusPlanned from '../../../storybook/assets/statusPlanned.svg';
+import statusDeprecated from '../../../storybook/assets/statusDeprecated.svg';
+
+import image from '../../../storybook/assets/component-button-decisiontree.svg';
+
+import { Meta, Title, Description, Story, Canvas, Controls, ArgTypes } from '@storybook/blocks';
+import * as WtgButton from './WtgButton.stories.ts';
+
+<Meta of={WtgButton} />
+
+<div className="component-header">
+    <h1>Button</h1>
+    <span className="component-status-badge">Alpha</span>
+</div>
+
+<table style={{ width: '100%' }} className="component-status">
+    <tr>
+        <th></th>
+        <th scope="col" className="th-center">
+            Supply 1.0
+        </th>
+        <th scope="col">Supply 0.5</th>
+    </tr>
+    <tr>
+        <th scope="row">Build</th>
+        <td>
+            {' '}
+            <img className="status-chip" src={statusPlanned}></img> Work in Progress
+        </td>
+        <td>
+            <img className="status-chip" src={statusAvailable}></img> Available
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">Design</th>
+        <td>
+            <img className="status-chip" src={statusAvailable}></img> [Available in Figma](https://www.figma.com/file/g6kTPiwXZrzyIZb4i41RYl/%5BCargoWise%5D-SUPPLY---Components?type=design&node-id=171-10221&mode=design&t=2M0RVP1vK37vQGdk-4)
+        </td>
+        <td>
+            <img className="status-chip" src={statusAvailable}></img> [Available in Figma](https://www.figma.com/file/g6kTPiwXZrzyIZb4i41RYl/%5BCargoWise%5D-SUPPLY---Components?type=design&node-id=171-10221&mode=design&t=2M0RVP1vK37vQGdk-4)
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">Documentation</th>
+        <td>
+            {' '}
+            <img className="status-chip" src={statusPlanned}></img> Work in Progress
+        </td>
+        <td>
+            {' '}
+            <img className="status-chip" src={statusDeprecated}></img> Deprecated
+        </td>
+    </tr>
+</table>
+
+## Overview
+
+<p className="component-description">
+    <Description />
+</p>
+
+<div className="component-preview grid">
+    <span>Component preview</span>
+    <Story of={WtgButton.Primary} />
+    <Story of={WtgButton.Default} />
+    <Story of={WtgButton.Ghost} />
+</div>
+
+## Table of contents
+
+<ul>
+    <li>[Overview](#overview)</li>
+    <li>[Quick tips](#quick-tips)</li>
+    <li>[Decision tree](#decision-tree)</li>
+    <li>[Best practices](#best-practices)</li>
+    <li>[Component variants](#component-variants)</li>
+    <li>[Related components](#related-components)</li>
+</ul>
+
+## Quick tips
+
+<div className="component-quicktip">
+    <ul>
+        <li>Keep Button labels concise and clearly explain the action to be expected.</li>
+        <li>
+            You can only have one primary action per page, guiding users to the logical next step in their workflow
+            (Excluding framework related actions).
+        </li>
+        <li>
+            Use success and error states sparingly and appropriately. For example, only use an error Button variant for
+            an action that’s difficult or impossible to undo.
+        </li>
+        <li>Use strong, actionable verbs in labels such as “Add new”, “Close”, “Cancel”, or “Save”.</li>
+        <li>
+            Avoid using Buttons to link to other pages. Use a regular link or a plain style instead where necessary.
+        </li>
+    </ul>
+</div>
+
+## Decision tree
+
+<img src={image} className="component-img"></img>
+
+## Best practices
+
+### Button labels
+
+<p>
+    Keep Button labels concise, clear, and action-oriented. Use verbs like "Submit," "Save," and "Cancel". Avoid vague
+    labels like "Click here." Consistent labels improve the user experience.
+</p>
+
+### Buttons and validations
+
+<p>
+    Avoid using disable state buttons when a form has been validated and triggered errors. This approach takes autonomy
+    away from the user and leads to a less-than-ideal experience. Instead, use the Alert components to warn a user there
+    are errors on their page that need to be fixed before submitting.
+</p>
+
+### Success and Error variants
+
+<p>Success and error buttons should be used sparingly and only if they fall into the following use cases.</p>
+<p>
+    <strong>Success:</strong> Used for Primary actions that are positive confirmations such as “approve” and only if
+    there are no other primary actions present.
+</p>
+<p>
+    <strong>Error:</strong> Used for Primary and default actions that are destructive such as “delete” in order to
+    indicate the action is not easily reversed.
+</p>
+
+<div className="component-preview">
+    <span>Component preview</span>
+    <Story of={WtgButton.Variants} />
+</div>
+
+## Icons
+
+<p>Icons can provide visual cues to support the Button's purpose.</p>
+<ul>
+    <li>Use sparingly and only when the icon provides additional context to the action being taken.</li>
+    <li>Always prioritize clarity and understandability when deciding whether to include an icon.</li>
+    <li>In cases where an icon doesn't add value or may confuse users, a text-only Button is more appropriate.</li>
+</ul>
+
+<div className="component-preview">
+    <span>Component preview</span>
+    <Story of={WtgButton.Icons} />
+</div>
+
+<p>
+    Use <strong>Leading Icons</strong> to visually support an action, and provide additional context to what is
+    happening. For example, adding a “+” to an “Add new X” Button helps provide additional context to the action.
+</p>
+<p>
+    Use <strong>Trailing Icons</strong> to better support the user in understanding the UI behaviour the action is about
+    to prompt. For example, using an arrow can indicate that a Button will open a dropdown or move to another screen.
+</p>
+
+## Component variants
+
+### Primary
+
+<p>
+    Primary Buttons are reserved for the main call-to-actions of a page or panel. Primary Buttons have the highest
+    visual impact of the Button variants and, therefore, communicate actions that move the workflow forward.
+</p>
+
+<ul>
+    <li>
+        Use a single primary action per page to keep the purpose of your next logical step clear. This is what you want
+        your user to click in a normal scenario.
+    </li>
+</ul>
+
+<Canvas>
+    <Story of={WtgButton.Primary} />
+</Canvas>
+#### Component properties
+<Controls of={WtgButton.Primary} />
+
+### Default
+
+<p>
+    Default Buttons are medium-emphasis Buttons that are designed to support Primary Buttons, like ‘Edit’, ‘View’,
+    ‘Clear’ or ‘Duplicate’. They contain actions that are important but don’t necessarily progress the workflow forward.
+    They can also offer ways to prompt alternative workflows from the current screen.
+</p>
+
+<ul>
+    <li>
+        Use the <strong>error</strong> variant for destructive actions such as "discard" or "delete."
+    </li>
+</ul>
+
+<Canvas>
+    <Story of={WtgButton.Default} />
+</Canvas>
+
+### Ghost
+
+<p>
+    Ghost Buttons or Text Buttons are typically the lowest priority actions in a design, especially when presenting
+    multiple options on a page or panel.
+</p>
+
+<ul>
+    <li>Do not use icons in ghost buttons</li>
+    <li>It can be used to provide multiple supplementary actions if there is no clear primary or secondary action.</li>
+    <li>Best used for non-critical choices in a workflow, such as cancelling or subscribe</li>
+</ul>
+
+<Canvas>
+    <Story of={WtgButton.Ghost} />
+</Canvas>
+
+## Related components
+
+<div className="grid-3">
+  <div className="component-related">
+    <div className="card">
+
+        <div>
+            <div className="component-related-canvas">
+                <Story of={WtgButton.Ghost} />
+            </div>
+            <h3>Actionbar</h3>
+            <p>A panel used to contain the primary, secondary and destructive actions you can perform on a page or entity.</p>
+        </div>
+    </div>
+
+  </div>
+  <div className="component-related">
+    <div className="card">
+
+        <div>
+            <div className="component-related-canvas">
+                <Story of={WtgButton.Ghost} />
+            </div>
+            <h3>Actionbar</h3>
+            <p>A panel used to contain the primary, secondary and destructive actions you can perform on a page or entity.</p>
+        </div>
+    </div>
+
+  </div>
+  <div className="component-related">
+    <div className="card">
+
+        <div>
+            <div className="component-related-canvas">
+                <Story of={WtgButton.Ghost} />
+            </div>
+            <h3>Actionbar</h3>
+            <p>A panel used to contain the primary, secondary and destructive actions you can perform on a page or entity.</p>
+        </div>
+    </div>
+
+  </div>
+</div>

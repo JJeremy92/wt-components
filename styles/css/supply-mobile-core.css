@@ -1,0 +1,27 @@
+:root {
+	--s-padding-xs: 3px;
+	--s-padding-s: 6px;
+	--s-padding-m: 12px;
+	--s-padding-l: 18px;
+	--s-padding-xl: 24px;
+	--s-padding-xxl: 48px;
+	--s-spacing-xs: 3px;
+	--s-spacing-s: 6px;
+	--s-spacing-m: 12px;
+	--s-spacing-l: 18px;
+	--s-spacing-xl: 24px;
+	--s-spacing-xxl: 48px;
+	--s-sizing-xs: 12px;
+	--s-sizing-s: 18px;
+	--s-sizing-m: 24px;
+	--s-sizing-l: 36px;
+	--s-sizing-xl: 48px;
+	--s-sizing-xxl: 72px;
+	--s-radius-xs: 3px;
+	--s-radius-s: 6px;
+	--s-radius-m: 12px;
+	--s-radius-l: 18px;
+	--s-radius-xl: 24px;
+	--s-radius-xxl: 48px;
+	--s-mobile: truepx
+}

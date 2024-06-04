@@ -1,0 +1,5 @@
+:root {
+	--s-elevation-button-default: 0px 1px 1px 0px rgba(17,17,16,0.06), inset 0px -1px 1px 1px #f1f1ef, inset 0px 0px 2px 0px #f8f8f7;
+	--s-elevation-button-hover: 0px 1px 1px 0px rgba(17,17,16,0.06), inset 0px -1px 1px 1px #f1f1ef, inset 0px 0px 2px 0px #f8f8f7;
+	--s-elevation-button-pressed: inset 0px 1px 2px 1px #b9b9b5, inset 0px -1px 1px 0px rgba(185,185,181,0.4)
+}
